@@ -27,6 +27,7 @@ public class LeastCharacter {
                 }
             }
             System.out.println(Character.toUpperCase(minChar));
+            sc.close();
         }
     }
 }
