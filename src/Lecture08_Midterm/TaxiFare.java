@@ -22,5 +22,6 @@ public class TaxiFare {
         }
         int total = (int)Math.round(price * (1 - precent));
         System.out.print(total);
+        sc.close();
     }
 }
