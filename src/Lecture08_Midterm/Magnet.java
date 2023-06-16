@@ -19,4 +19,3 @@ public class Magnet {
         System.out.println(count);
     }
 }
-}
