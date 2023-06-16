@@ -17,4 +17,3 @@ public class BiggestOddDiv {
         System.out.println(largestOddDivisor(n));
     }
 }
-}
