@@ -17,7 +17,7 @@ public class GreatestCommonDiv {
         int number1 = sc.nextInt();
         int number2 = sc.nextInt();
 
-        System.out.println(gcd(number1, number2));\
+        System.out.println(gcd(number1, number2));
         sc.close();
     }
 }
