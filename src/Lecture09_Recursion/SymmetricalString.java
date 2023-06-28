@@ -6,20 +6,24 @@ public class SymmetricalString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        String s = sc.next();
-        boolean isSymmetric = true;
+        sc.nextLine();
+        String s = sc.nextLine();
+        String result = isPalindrome(s) ? "YES" : "NO";
+        System.out.println(result);
+        sc.close();
 
-        for (int i = 0; i <  n / 2; i++) {
-            if (s.charAt(i) != s.charAt(n - i - 1)) {
-                isSymmetric = false;
-                break;
-            }
-        }
-        if (isSymmetric) {
-            System.out.println("YES");
+    }
+
+    public static boolean isPalindrome(String s) {
+        if (s.length() <= 1) {
+            return true;
         } else {
-            System.out.println("NO");
-            sc.close();
+            if (s.charAt(0) != s.charAt(s.length() - 1)) {
+                return false;
+            } else {
+                String subString = s.substring(1, s.length() - 1);
+                return isPalindrome(subString);
+            }
         }
     }
 }
