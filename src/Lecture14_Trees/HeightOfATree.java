@@ -2,22 +2,10 @@ package Lecture14_Trees;
 
 import java.util.Scanner;
 
-class TreeNode1 {
-    int val;
-    TreeNode1 left;
-    TreeNode1 right;
-
-    public TreeNode1(int val) {
-        this.val = val;
-        left = null;
-        right = null;
-    }
-}
-
 public class HeightOfATree {
-    public static TreeNode1 insertNode(TreeNode1 root, int val) {
+    public static TreeNode insertNode(TreeNode root, int val) {
         if (root == null) {
-            return new TreeNode1(val);
+            return new TreeNode(val);
         }
 
         if (val < root.val) {
@@ -29,7 +17,7 @@ public class HeightOfATree {
         return root;
     }
 
-    public static int getHeight(TreeNode1 root) {
+    public static int getHeight(TreeNode root) {
         if (root == null) {
             return 0;
         }
@@ -49,7 +37,7 @@ public class HeightOfATree {
             values[i] = sc.nextInt();
         }
 
-        TreeNode1 root = null;
+        TreeNode root = null;
         for (int value : values) {
             root = insertNode(root, value);
         }
